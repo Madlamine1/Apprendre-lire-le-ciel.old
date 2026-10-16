@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apprendre à lire le ciel – Reconnaître plus de 30 objets célestes à l'œil nu</title>
+<meta name="description" content="Guide pratique pour repérer étoiles, constellations, planètes et galaxies à l'œil nu, même en ville. Repères valables à Bamako et à Paris. Sans télescope.">
+<meta property="og:type" content="book">
+<meta property="og:title" content="Apprendre à lire le ciel – Mohamed Lamine Traoré">
+<meta property="og:description" content="Reconnaissez plus de 30 objets célestes à l'œil nu, sans instrument, même sous le ciel d'une grande ville.">
+<meta property="og:image" content="[URL_COUVERTURE]">
+<meta property="og:url" content="[URL_DU_SITE]">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Apprendre à lire le ciel",
+  "alternativeHeadline": "Guide pratique pour reconnaître et localiser plus de 30 objets célestes à l'œil nu",
+  "author": { "@type": "Person", "name": "Mohamed Lamine Traoré" },
+  "inLanguage": "fr",
+  "numberOfPages": 103,
+  "image": "[URL_COUVERTURE]",
+  "url": "[URL_DU_SITE]"
+}
+</script>
+<style>
+  :root{
+    --bg:#070d1f; --bg2:#0d1a35; --card:#111f3d; --text:#e9eefc; --muted:#a9b6d6;
+    --accent:#f2b84b; --accent2:#7fb2ff; --line:#233459;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  body{
+    margin:0; font-family:Georgia,"Times New Roman",serif; line-height:1.65; color:var(--text);
+    background:
+      radial-gradient(1.5px 1.5px at 12% 18%,#fff9 50%,transparent 51%),
+      radial-gradient(1px 1px at 72% 32%,#fff8 50%,transparent 51%),
+      radial-gradient(1.5px 1.5px at 40% 66%,#fff7 50%,transparent 51%),
+      radial-gradient(1px 1px at 88% 78%,#fff8 50%,transparent 51%),
+      radial-gradient(1px 1px at 25% 90%,#fff6 50%,transparent 51%),
+      linear-gradient(180deg,var(--bg),var(--bg2));
+    padding-bottom:env(safe-area-inset-bottom,0);
+  }
+  a{color:var(--accent2)}
+  .wrap{max-width:980px;margin:auto;padding:0 20px}
+  nav{position:sticky;top:0;z-index:20;background:#070d1fe6;backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+  nav strong{font-size:1.05rem;letter-spacing:.5px}
+  .btn{display:inline-block;background:var(--accent);color:#1a1200;padding:14px 26px;border-radius:10px;
+       text-decoration:none;font:700 1rem Arial,sans-serif;border:0;cursor:pointer;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.alt{background:transparent;color:var(--text);border:2px solid var(--accent2)}
+  .btn.small{padding:8px 16px;font-size:.9rem}
+  .hero{display:flex;flex-wrap:wrap;gap:40px;align-items:center;padding:50px 0 40px}
+  .hero img{width:280px;max-width:100%;border-radius:8px;box-shadow:0 0 50px #4a78d455,0 14px 40px #000a}
+  .hero .txt{flex:1;min-width:280px}
+  .kicker{color:var(--accent);font:700 .85rem Arial,sans-serif;letter-spacing:2px;text-transform:uppercase}
+  h1{font-size:2.6rem;line-height:1.1;margin:8px 0 14px}
+  h2{font-size:1.7rem;margin:0 0 16px;color:#fff}
+  .lead{font-size:1.15rem;color:var(--muted)}
+  .check{list-style:none;padding:0;margin:18px 0}
+  .check li{padding-left:28px;position:relative;margin:8px 0}
+  .check li::before{content:"✦";position:absolute;left:0;color:var(--accent)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+  .price{color:var(--muted);font:.9rem Arial,sans-serif;margin-top:10px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card h3{margin:0 0 8px;color:var(--accent)}
+  details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:4px 18px}
+  summary{cursor:pointer;font-weight:bold;padding:12px 0;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--accent);font-size:1.3rem}
+  details[open] summary::after{content:"–"}
+  details ul{margin:0 0 14px;padding-left:20px;color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{background:#16284d;border:1px solid var(--line);padding:6px 12px;border-radius:999px;font:.9rem Arial,sans-serif}
+  .chips b{display:block;width:100%;color:var(--accent);margin:12px 0 2px;font:700 .8rem Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase}
+  blockquote{margin:0;background:var(--card);border-left:4px solid var(--accent);padding:18px 22px;border-radius:0 10px 10px 0;font-style:italic;color:#dbe5ff}
+  .two{display:flex;flex-wrap:wrap;gap:24px}
+  .two>div{flex:1;min-width:260px}
+  form{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  input[type=email]{flex:1;min-width:220px;padding:14px;border-radius:8px;border:1px solid var(--line);background:#0a1530;color:var(--text);font-size:1rem}
+  button.btn{font-size:1rem}
+  .center{text-align:center}
+  footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;color:var(--muted);font:.85rem Arial,sans-serif}
+  .sticky{display:none;position:fixed;left:0;right:0;bottom:0;background:#070d1ff2;border-top:1px solid var(--line);
+          padding:10px 12px calc(10px + env(safe-area-inset-bottom,0));text-align:center;z-index:30}
+  @media (max-width:700px){h1{font-size:2rem}.sticky{display:block}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <strong>✦ Apprendre à lire le ciel</strong>
+  <a class="btn small" href="#acheter">Acheter</a>
+</div></nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="couverture.jpg" alt="Couverture du livre Apprendre à lire le ciel de Mohamed Lamine Traoré">
+    <div class="txt">
+      <div class="kicker">Guide d'observation à l'œil nu</div>
+      <h1>Apprendre à lire le ciel</h1>
+      <p class="lead">Reconnaissez et montrez plus de <strong>30 objets célestes</strong> : étoiles, constellations, planètes et même une galaxie. Sans télescope, sans jumelles, même en ville.</p>
+      <ul class="check">
+        <li>Une méthode pas à pas : on part d'Orion, puis on s'en sert pour trouver le reste</li>
+        <li>Des repères valables à <strong>Bamako</strong> comme à <strong>Paris</strong></li>
+        <li>Valable en toute saison, quelle que soit l'heure de la nuit</li>
+        <li>103 pages, écrit par un autodidacte passionné, sans jargon</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="[LIEN_AMAZON_BROCHE]" target="_blank" rel="noopener">Broché sur Amazon – 14 $</a>
+        <a class="btn alt" href="[LIEN_AMAZON_EBOOK]" target="_blank" rel="noopener">Ebook Kindle – 9,99 $</a>
+      </div>
+      <p class="price">Livraison et paiement sécurisés par Amazon.</p>
+    </div>
+  </header>
+
+  <!-- ACCROCHE -->
+  <section>
+    <h2>Et si vous saviez enfin ce que vous regardez ?</h2>
+    <p class="lead">Chaque soir, le ciel est là. Mais pour la plupart d'entre nous, ce ne sont que des points lumineux. Ce livre change ça en quelques minutes de lecture par objet.</p>
+    <p>Vous découvrirez que certaines étoiles sont rouges, d'autres bleues. Que la lumière de Sirius a voyagé plus de 8 ans avant d'arriver jusqu'à vos yeux. Que la galaxie d'Andromède, à 2,5 millions d'années-lumière, est visible sans instrument. Et que depuis que vous avez commencé à lire cette page, vous avez déjà parcouru plusieurs milliers de kilomètres avec la Terre.</p>
+  </section>
+
+  <!-- POUR QUI -->
+  <section>
+    <h2>Ce livre est fait pour vous si…</h2>
+    <div class="grid">
+      <div class="card"><h3>Vous débutez</h3><p>Vous n'avez jamais appris le ciel et vous voulez une méthode simple, sans termes techniques inutiles.</p></div>
+      <div class="card"><h3>Vous vivez en ville</h3><p>La pollution lumineuse vous décourage ? Les repères du livre fonctionnent même sous un ciel éclairé.</p></div>
+      <div class="card"><h3>Vous voulez transmettre</h3><p>Vous voulez montrer Orion, Sirius ou Jupiter à vos enfants, vos amis, vos élèves.</p></div>
+      <div class="card"><h3>Vous voyagez</h3><p>Croix du Sud, Canopus, Achernar : découvrez le ciel de l'hémisphère sud, que peu de guides en français expliquent.</p></div>
+    </div>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section>
+    <h2>La méthode : un repère mène à un autre</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Trouvez Orion</h3><p>La constellation la plus facile du ciel. Son Baudrier, trois étoiles alignées, devient votre point de départ.</p></div>
+      <div class="card"><h3>2. Prolongez les lignes</h3><p>Du Baudrier vers Sirius, de la Grande Casserole vers Arcturus puis Spica : le livre vous apprend à glisser d'un astre à l'autre.</p></div>
+      <div class="card"><h3>3. Confirmez</h3><p>Couleur, éclat, forme voisine : chaque objet a sa vérification, pour être sûr de ne pas se tromper.</p></div>
+    </div>
+    <p style="margin-top:22px">Un point fort du livre : les schémas existent en <strong>deux versions, Bamako (12° N) et Paris (49° N)</strong>, parce qu'une même constellation n'apparaît pas pareil selon l'endroit où l'on se trouve.</p>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section>
+    <h2>Au programme</h2>
+    <details open>
+      <summary>Chapitre I – Premiers pas sous le ciel nocturne</summary>
+      <ul>
+        <li>Pourquoi le ciel est bleu le jour et noir la nuit</li>
+        <li>Préparer ses yeux, s'éloigner des lumières, observer en sécurité</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Chapitre II – Comprendre la mécanique céleste</summary>
+      <ul>
+        <li>Les quatre grands mouvements de notre voyage dans l'espace</li>
+        <li>Magnitude apparente et absolue : pourquoi une étoile paraît plus brillante qu'une autre</li>
+        <li>Constellation ou astérisme : quelle différence ?</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Chapitre III – Les étoiles les plus brillantes</summary>
+      <ul>
+        <li>Sirius, Canopus, Alpha du Centaure, Arcturus, Véga, Capella, Rigel, Procyon, Achernar, Bételgeuse</li>
+        <li>Spica en bonus, avec la célèbre astuce « Arc to Arcturus »</li>
+        <li>Le Triangle d'été et le Triangle d'hiver</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Chapitre IV – Les constellations emblématiques et le zodiaque</summary>
+      <ul>
+        <li>Orion, les Gémeaux, la Croix du Sud, le Scorpion et Antarès, le Lion et Régulus</li>
+        <li>Le Taureau : Aldébaran, les Hyades, les Pléiades</li>
+        <li>Le Sagittaire et sa Théière, Cassiopée</li>
+        <li>Andromède et sa galaxie, l'un des objets les plus lointains visibles à l'œil nu</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Chapitre V – Observer les planètes</summary>
+      <ul>
+        <li>Vénus, Jupiter, Saturne, Mars, Mercure</li>
+        <li>Comment distinguer une planète d'une étoile, et Mars d'Antarès</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Conclusion – Le ciel vous appartient</summary>
+      <ul><li>Poursuivre l'aventure, avec patience et curiosité</li></ul>
+    </details>
+  </section>
+
+  <!-- OBJETS -->
+  <section>
+    <h2>Plus de 30 objets célestes à reconnaître</h2>
+    <div class="chips">
+      <b>Étoiles</b>
+      <span>Sirius</span><span>Canopus</span><span>Alpha du Centaure</span><span>Hadar</span><span>Arcturus</span><span>Spica</span><span>Véga</span><span>Deneb</span><span>Altaïr</span><span>Capella</span><span>Rigel</span><span>Bételgeuse</span><span>Procyon</span><span>Achernar</span><span>Antarès</span><span>Régulus</span><span>Aldébaran</span><span>Castor</span><span>Pollux</span><span>Étoile Polaire</span>
+      <b>Constellations et repères</b>
+      <span>Orion</span><span>Baudrier d'Orion</span><span>Grande Ourse</span><span>Petite Ourse</span><span>Croix du Sud</span><span>Gémeaux</span><span>Scorpion</span><span>Lion</span><span>Taureau</span><span>Sagittaire</span><span>Cassiopée</span><span>Andromède</span><span>Triangle d'été</span><span>Triangle d'hiver</span>
+      <b>Amas, galaxie, planètes</b>
+      <span>Pléiades</span><span>Hyades</span><span>Galaxie d'Andromède</span><span>Vénus</span><span>Jupiter</span><span>Saturne</span><span>Mars</span><span>Mercure</span>
+    </div>
+  </section>
+
+  <!-- EXTRAIT -->
+  <section>
+    <h2>Un avant-goût : trouver Sirius</h2>
+    <blockquote>
+      « Repérez le Baudrier d'Orion : identifiez les trois étoiles alignées qui forment la ceinture d'Orion. Imaginez une ligne prolongeant cet alignement. Votre regard va alors buter sur un éclat bleu-blanc spectaculaire, impossible à manquer. Vous y êtes : c'est Sirius, le joyau du Grand Chien. »
+    </blockquote>
+    <p class="price">Extrait du chapitre III.</p>
+  </section>
+
+  <!-- AUTEUR -->
+  <section>
+    <h2>L'auteur</h2>
+    <div class="two">
+      <div>
+        <p><strong>Mohamed Lamine Traoré</strong> est un autodidacte passionné d'astronomie. Il n'a pas écrit un traité d'astrophysique, mais un guide pratique, avec ses techniques et ses astuces personnelles, pour que chacun puisse apprendre à lire le ciel par l'observation.</p>
+      </div>
+      <div>
+        <p class="lead">« Le plus grand instrument de l'astronome n'est ni un télescope sophistiqué ni un objectif de pointe : ce sont vos propres yeux. »</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Questions fréquentes</h2>
+    <details><summary>Faut-il un télescope ou des jumelles ?</summary><p>Non. Toute la méthode repose sur l'œil nu.</p></details>
+    <details><summary>Est-ce que ça marche en ville ?</summary><p>Oui. Le livre est pensé pour les ciels pollués par la lumière : on part des astres les plus brillants et on suit des repères simples.</p></details>
+    <details><summary>Je suis en Afrique de l'Ouest, est-ce adapté ?</summary><p>Oui. Les repères sont donnés pour Bamako (12° N), avec des comparaisons pour Paris (49° N). Vous y trouverez aussi les astres du ciel austral : Croix du Sud, Canopus, Achernar, Alpha du Centaure.</p></details>
+    <details><summary>Et en France ou en Europe ?</summary><p>Oui, avec les schémas pour Paris. Les astres trop au sud pour être vus depuis l'Europe sont signalés comme tels.</p></details>
+    <details><summary>À quelle période observer ?</summary><p>Chaque objet a sa saison. Par exemple Orion de novembre à février, le Scorpion de mai à août, Cassiopée de septembre à décembre.</p></details>
+    <details><summary>Ebook ou broché ?</summary><p>Le broché se feuillette dehors, avec une lampe rouge ou faible. L'ebook se lit sur téléphone et reste toujours avec vous. Les deux contiennent les mêmes schémas.</p></details>
+  </section>
+
+  <!-- E-MAIL -->
+  <section>
+    <h2>Recevez une fiche gratuite : « Les premiers repères du ciel »</h2>
+    <p>Laissez votre e-mail pour recevoir une fiche d'une page à emporter dehors, ainsi que les conseils d'observation du moment.</p>
+    <form action="[URL_FORMULAIRE]" method="POST">
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+      <button class="btn" type="submit">Je veux la fiche</button>
+    </form>
+  </section>
+
+  <!-- ACHAT -->
+  <section id="acheter" class="center">
+    <h2>Levez les yeux dès ce soir</h2>
+    <p class="lead">Choisissez votre format.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn" href="[LIEN_AMAZON_BROCHE]" target="_blank" rel="noopener">Broché – 14 $</a>
+      <a class="btn alt" href="[LIEN_AMAZON_EBOOK]" target="_blank" rel="noopener">Ebook Kindle – 9,99 $</a>
+    </div>
+    <!-- Si tu vends aussi le PDF en direct, décommente :
+    <p style="margin-top:20px">Pas de carte bancaire Amazon ? <a href="[LIEN_PDF_DIRECT]">Acheter le PDF (Mobile Money / PayPal)</a></p>
+    -->
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Mohamed Lamine Traoré – Tous droits réservés<br>
+  Contact : <a href="mailto:[TON_EMAIL]">[TON_EMAIL]</a>
+</footer>
+
+<div class="sticky">
+  <a class="btn" href="#acheter">Acheter le livre</a>
+</div>
+
+</body>
+</html>
