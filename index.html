@@ -8,8 +8,8 @@
 <meta property="og:type" content="book">
 <meta property="og:title" content="Apprendre à lire le ciel – Mohamed Lamine Traoré">
 <meta property="og:description" content="Reconnaissez plus de 30 objets célestes à l'œil nu, sans instrument, même sous le ciel d'une grande ville.">
-<meta property="og:image" content="[URL_COUVERTURE]">
-<meta property="og:url" content="[URL_DU_SITE]">
+<meta property="og:image" content="https://madlamine.store/couverture.jpg">
+<meta property="og:url" content="https://madlamine.store/">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -20,8 +20,8 @@
   "author": { "@type": "Person", "name": "Mohamed Lamine Traoré" },
   "inLanguage": "fr",
   "numberOfPages": 103,
-  "image": "[URL_COUVERTURE]",
-  "url": "[URL_DU_SITE]"
+  "image": "https://madlamine.store/couverture.jpg",
+  "url": "https://madlamine.store/"
 }
 </script>
 <style>
@@ -80,15 +80,15 @@
   blockquote{margin:0;background:var(--card);border-left:4px solid var(--accent);padding:18px 22px;border-radius:0 10px 10px 0;font-style:italic;color:#dbe5ff}
   .two{display:flex;flex-wrap:wrap;gap:24px}
   .two>div{flex:1;min-width:260px}
-  form{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-  input[type=email]{flex:1;min-width:220px;padding:14px;border-radius:8px;border:1px solid var(--line);background:#0a1530;color:var(--text);font-size:1rem}
-  button.btn{font-size:1rem}
   .center{text-align:center}
   footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;color:var(--muted);font:.85rem Arial,sans-serif}
   .sticky{display:none;position:fixed;left:0;right:0;bottom:0;background:#070d1ff2;border-top:1px solid var(--line);
           padding:10px 12px calc(10px + env(safe-area-inset-bottom,0));text-align:center;z-index:30}
   @media (max-width:700px){h1{font-size:2rem}.sticky{display:block}}
 </style>
+
+<!-- COLLE ICI, juste avant </head>, le LONG code universel MailerLite (celui qui commence par <!-- MailerLite Universal -->) -->
+
 </head>
 <body>
 
@@ -113,8 +113,8 @@
         <li>103 pages, écrit par un autodidacte passionné, sans jargon</li>
       </ul>
       <div class="cta-row">
-        <a class="btn" href="[LIEN_AMAZON_BROCHE]" target="_blank" rel="noopener">Broché sur Amazon – 14 $</a>
-        <a class="btn alt" href="[LIEN_AMAZON_EBOOK]" target="_blank" rel="noopener">Ebook Kindle – 9,99 $</a>
+        <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G?utm_source=site" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
+        <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ?utm_source=site" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
       </div>
       <p class="price">Livraison et paiement sécurisés par Amazon.</p>
     </div>
@@ -243,14 +243,11 @@
     <details><summary>Ebook ou broché ?</summary><p>Le broché se feuillette dehors, avec une lampe rouge ou faible. L'ebook se lit sur téléphone et reste toujours avec vous. Les deux contiennent les mêmes schémas.</p></details>
   </section>
 
-  <!-- E-MAIL -->
-  <section>
+  <!-- FICHE GRATUITE (cachée tant que MailerLite n'est pas prêt : supprime le mot "hidden" quand c'est bon) -->
+  <section id="fiche" hidden>
     <h2>Recevez une fiche gratuite : « Les premiers repères du ciel »</h2>
-    <p>Laissez votre e-mail pour recevoir une fiche d'une page à emporter dehors, ainsi que les conseils d'observation du moment.</p>
-    <form action="[URL_FORMULAIRE]" method="POST">
-      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
-      <button class="btn" type="submit">Je veux la fiche</button>
-    </form>
+    <p>Laissez votre e-mail pour recevoir une fiche d'une page à emporter dehors, ainsi que les conseils d'observation du moment. Désinscription possible à tout moment.</p>
+    <div class="ml-embedded" data-form="CODE_DU_FORMULAIRE"></div>
   </section>
 
   <!-- ACHAT -->
@@ -258,19 +255,26 @@
     <h2>Levez les yeux dès ce soir</h2>
     <p class="lead">Choisissez votre format.</p>
     <div class="cta-row" style="justify-content:center">
-      <a class="btn" href="[LIEN_AMAZON_BROCHE]" target="_blank" rel="noopener">Broché – 14 $</a>
-      <a class="btn alt" href="[LIEN_AMAZON_EBOOK]" target="_blank" rel="noopener">Ebook Kindle – 9,99 $</a>
+      <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G?utm_source=site" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
+      <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ?utm_source=site" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
     </div>
-    <!-- Si tu vends aussi le PDF en direct, décommente :
-    <p style="margin-top:20px">Pas de carte bancaire Amazon ? <a href="[LIEN_PDF_DIRECT]">Acheter le PDF (Mobile Money / PayPal)</a></p>
-    -->
+
+    <!-- ACHAT DIRECT PAR WHATSAPP (caché : supprime le mot "hidden" après avoir mis ton numéro, et seulement si l'ebook n'est PAS dans KDP Select) -->
+    <div id="achat-direct" hidden>
+      <p class="lead" style="margin-top:28px">Pas de carte bancaire pour Amazon ?</p>
+      <a class="btn alt" target="_blank" rel="noopener"
+         href="https://wa.me/223XXXXXXXX?text=Bonjour%2C%20je%20souhaite%20acheter%20le%20livre%20%C2%AB%20Apprendre%20%C3%A0%20lire%20le%20ciel%20%C2%BB%20en%20PDF.">
+         Commander le PDF par WhatsApp
+      </a>
+      <p class="price">Paiement par Mobile Money.</p>
+    </div>
   </section>
 
 </div>
 
 <footer>
   © 2026 Mohamed Lamine Traoré – Tous droits réservés<br>
-  Contact : <a href="mailto:[TON_EMAIL]">[TON_EMAIL]</a>
+  <a href="LIEN_GOOGLE_FORM" target="_blank" rel="noopener">Nous écrire</a>
 </footer>
 
 <div class="sticky">
