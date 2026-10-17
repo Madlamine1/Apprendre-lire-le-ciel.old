@@ -33,15 +33,35 @@
   html{scroll-behavior:smooth;scroll-padding-top:70px}
   body{
     margin:0; font-family:Georgia,"Times New Roman",serif; line-height:1.65; color:var(--text);
-    background:
-      radial-gradient(1.5px 1.5px at 12% 18%,#fff9 50%,transparent 51%),
-      radial-gradient(1px 1px at 72% 32%,#fff8 50%,transparent 51%),
-      radial-gradient(1.5px 1.5px at 40% 66%,#fff7 50%,transparent 51%),
-      radial-gradient(1px 1px at 88% 78%,#fff8 50%,transparent 51%),
-      radial-gradient(1px 1px at 25% 90%,#fff6 50%,transparent 51%),
-      linear-gradient(180deg,var(--bg),var(--bg2));
+    background-color:var(--bg2);
+    background-image:linear-gradient(180deg,var(--bg),var(--bg2));
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     padding-bottom:env(safe-area-inset-bottom,0);
   }
+
+  /* Fond étoilé : deux couches fixes d'étoiles répétées */
+  body::before,body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
+  body::before{
+    background-image:
+      radial-gradient(1.8px 1.8px at 40px 60px,#fff,transparent),
+      radial-gradient(1.3px 1.3px at 150px 170px,#ffffffcc,transparent),
+      radial-gradient(2px 2px at 230px 90px,#fff,transparent),
+      radial-gradient(1.3px 1.3px at 90px 250px,#ffffffaa,transparent),
+      radial-gradient(1.6px 1.6px at 310px 200px,#fff,transparent);
+    background-size:260px 260px,340px 340px,420px 420px,300px 300px,380px 380px;
+  }
+  body::after{
+    background-image:
+      radial-gradient(1.8px 1.8px at 120px 30px,#cfe0ff,transparent),
+      radial-gradient(1.4px 1.4px at 60px 190px,#fff,transparent),
+      radial-gradient(2px 2px at 250px 140px,#ffe9b8,transparent);
+    background-size:330px 330px,270px 270px,410px 410px;
+    animation:twinkle 5s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle{from{opacity:.2}to{opacity:1}}
+  @media (prefers-reduced-motion:reduce){body::after{animation:none}}
+
   a{color:var(--accent2)}
   .wrap{max-width:980px;margin:auto;padding:0 20px}
   nav{position:sticky;top:0;z-index:20;background:#070d1fe6;backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
@@ -84,24 +104,8 @@
   @media (max-width:700px){h1{font-size:2rem}.sticky{display:block}}
 </style>
 
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2716875');
-</script>
-<!-- End MailerLite Universal -->
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2716875');
-</script>
-<!-- End MailerLite Universal -->
+<!-- COLLE ICI le long code universel MailerLite, juste avant la fermeture du head -->
+
 </head>
 <body>
 
@@ -126,8 +130,8 @@
         <li>103 pages, écrit par un autodidacte passionné, sans jargon</li>
       </ul>
       <div class="cta-row">
-        <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
-        <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
+        <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G" target="_blank" rel="noopener" data-goatcounter-click="amazon-broche-haut" data-goatcounter-title="Clic Amazon broche (haut)">Broché sur Amazon – 12,98 €</a>
+        <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ" target="_blank" rel="noopener" data-goatcounter-click="amazon-ebook-haut" data-goatcounter-title="Clic Amazon ebook (haut)">Ebook Kindle – 5 €</a>
       </div>
       <p class="price">Livraison et paiement sécurisés par Amazon.</p>
     </div>
@@ -231,11 +235,11 @@
     <details><summary>Est-ce adapté à l'Afrique de l'Ouest comme à l'Europe ?</summary><p>Oui. Les repères sont donnés pour Bamako (12° N) et pour Paris (49° N), avec les astres du ciel austral comme la Croix du Sud, Canopus ou Achernar.</p></details>
   </section>
 
-  <!-- FICHE GRATUITE (formulaire MailerLite) -->
-  <section id="fiche">
+  <!-- FICHE GRATUITE (cachée tant que MailerLite n'est pas prêt : supprime le mot "hidden" quand c'est bon) -->
+  <section id="fiche" hidden>
     <h2>Recevez une fiche gratuite : « Les premiers repères du ciel »</h2>
     <p>Laissez votre e-mail pour recevoir une fiche d'une page à emporter dehors, ainsi que les conseils d'observation du moment. Désinscription possible à tout moment.</p>
-    <div class="ml-embedded" data-form="dZfory"></div>
+    <div class="ml-embedded" data-form="CODE_DU_FORMULAIRE"></div>
   </section>
 
   <!-- ACHAT -->
@@ -243,8 +247,23 @@
     <h2>Levez les yeux dès ce soir</h2>
     <p class="lead">Choisissez votre format.</p>
     <div class="cta-row" style="justify-content:center">
-      <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
-      <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
+      <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G" target="_blank" rel="noopener" data-goatcounter-click="amazon-broche-bas" data-goatcounter-title="Clic Amazon broche (bas)">Broché sur Amazon – 12,98 €</a>
+      <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ" target="_blank" rel="noopener" data-goatcounter-click="amazon-ebook-bas" data-goatcounter-title="Clic Amazon ebook (bas)">Ebook Kindle – 5 €</a>
+    </div>
+
+    <!-- ACHAT DIRECT DU PDF (caché : à afficher seulement quand l'ebook n'est PLUS dans KDP Select.
+         Supprime le mot "hidden", mets ton numéro à la place de 223XXXXXXXX et complète le prix) -->
+    <div id="achat-direct" hidden>
+      <p class="lead" style="margin-top:32px">Pas de carte bancaire pour Amazon ?</p>
+      <p>Commandez le PDF et payez avec le moyen de votre choix :</p>
+      <div class="chips" style="justify-content:center;margin-bottom:18px">
+        <span>PayPal</span><span>Orange Money</span><span>Wave</span><span>Moov Money</span>
+      </div>
+      <p class="price">Prix du PDF : [À COMPLÉTER]. Écrivez-moi sur WhatsApp : je vous indique comment payer, puis je vous envoie le fichier.</p>
+      <a class="btn alt" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-pdf" data-goatcounter-title="Clic WhatsApp PDF"
+         href="https://wa.me/223XXXXXXXX?text=Bonjour%2C%20je%20souhaite%20acheter%20le%20livre%20%C2%AB%20Apprendre%20%C3%A0%20lire%20le%20ciel%20%C2%BB%20en%20PDF.">
+         Commander le PDF par WhatsApp
+      </a>
     </div>
   </section>
 
@@ -252,12 +271,15 @@
 
 <footer>
   © 2026 Mohamed Lamine Traoré – Tous droits réservés<br>
-  <a href="https://forms.gle/swzBvvtkQxXRkKXR6" target="_blank" rel="noopener">Nous écrire</a>
+  <a href="LIEN_GOOGLE_FORM" target="_blank" rel="noopener" data-goatcounter-click="contact" data-goatcounter-title="Clic Nous écrire">Nous écrire</a>
 </footer>
 
 <div class="sticky">
-  <a class="btn" href="#acheter">Acheter le livre</a>
+  <a class="btn" href="#acheter" data-goatcounter-click="sticky-acheter" data-goatcounter-title="Clic bouton Acheter (mobile)">Acheter le livre</a>
 </div>
+
+<!-- Compteur de visites GoatCounter : remplace MONCODE par ton code (ex. madlamine) -->
+<script data-goatcounter="https://MONCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
