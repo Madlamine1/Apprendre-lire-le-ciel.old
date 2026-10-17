@@ -60,14 +60,11 @@
   h2{font-size:1.7rem;margin:0 0 16px;color:#fff}
   .lead{font-size:1.15rem;color:var(--muted)}
   .check{list-style:none;padding:0;margin:18px 0}
-  .check li{padding-left:28px;position:relative;margin:8px 0}
-  .check li::before{content:"✦";position:absolute;left:0;color:var(--accent)}
+  .check li{padding-left:24px;position:relative;margin:8px 0}
+  .check li::before{content:"";position:absolute;left:3px;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
   .price{color:var(--muted);font:.9rem Arial,sans-serif;margin-top:10px}
   section{padding:46px 0;border-top:1px solid var(--line)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .card h3{margin:0 0 8px;color:var(--accent)}
   details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:4px 18px}
   summary{cursor:pointer;font-weight:bold;padding:12px 0;list-style:none}
   summary::-webkit-details-marker{display:none}
@@ -87,13 +84,13 @@
   @media (max-width:700px){h1{font-size:2rem}.sticky{display:block}}
 </style>
 
-<!-- COLLE ICI, juste avant </head>, le LONG code universel MailerLite (celui qui commence par <!-- MailerLite Universal -->) -->
+<!-- COLLE ICI le long code universel MailerLite, juste avant la fermeture du head -->
 
 </head>
 <body>
 
 <nav><div class="wrap">
-  <strong>✦ Apprendre à lire le ciel</strong>
+  <strong>Apprendre à lire le ciel</strong>
   <a class="btn small" href="#acheter">Acheter</a>
 </div></nav>
 
@@ -113,8 +110,8 @@
         <li>103 pages, écrit par un autodidacte passionné, sans jargon</li>
       </ul>
       <div class="cta-row">
-        <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G?utm_source=site" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
-        <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ?utm_source=site" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
+        <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
+        <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
       </div>
       <p class="price">Livraison et paiement sécurisés par Amazon.</p>
     </div>
@@ -123,30 +120,8 @@
   <!-- ACCROCHE -->
   <section>
     <h2>Et si vous saviez enfin ce que vous regardez ?</h2>
-    <p class="lead">Chaque soir, le ciel est là. Mais pour la plupart d'entre nous, ce ne sont que des points lumineux. Ce livre change ça en quelques minutes de lecture par objet.</p>
+    <p class="lead">Dans tout le ciel, beaucoup de gens ne reconnaissent que deux astres : le Soleil et la Lune. Tout le reste n'est que points lumineux sans nom. Ce livre change cela, en quelques minutes de lecture par objet.</p>
     <p>Vous découvrirez que certaines étoiles sont rouges, d'autres bleues. Que la lumière de Sirius a voyagé plus de 8 ans avant d'arriver jusqu'à vos yeux. Que la galaxie d'Andromède, à 2,5 millions d'années-lumière, est visible sans instrument. Et que depuis que vous avez commencé à lire cette page, vous avez déjà parcouru plusieurs milliers de kilomètres avec la Terre.</p>
-  </section>
-
-  <!-- POUR QUI -->
-  <section>
-    <h2>Ce livre est fait pour vous si…</h2>
-    <div class="grid">
-      <div class="card"><h3>Vous débutez</h3><p>Vous n'avez jamais appris le ciel et vous voulez une méthode simple, sans termes techniques inutiles.</p></div>
-      <div class="card"><h3>Vous vivez en ville</h3><p>La pollution lumineuse vous décourage ? Les repères du livre fonctionnent même sous un ciel éclairé.</p></div>
-      <div class="card"><h3>Vous voulez transmettre</h3><p>Vous voulez montrer Orion, Sirius ou Jupiter à vos enfants, vos amis, vos élèves.</p></div>
-      <div class="card"><h3>Vous voyagez</h3><p>Croix du Sud, Canopus, Achernar : découvrez le ciel de l'hémisphère sud, que peu de guides en français expliquent.</p></div>
-    </div>
-  </section>
-
-  <!-- MÉTHODE -->
-  <section>
-    <h2>La méthode : un repère mène à un autre</h2>
-    <div class="grid">
-      <div class="card"><h3>1. Trouvez Orion</h3><p>La constellation la plus facile du ciel. Son Baudrier, trois étoiles alignées, devient votre point de départ.</p></div>
-      <div class="card"><h3>2. Prolongez les lignes</h3><p>Du Baudrier vers Sirius, de la Grande Casserole vers Arcturus puis Spica : le livre vous apprend à glisser d'un astre à l'autre.</p></div>
-      <div class="card"><h3>3. Confirmez</h3><p>Couleur, éclat, forme voisine : chaque objet a sa vérification, pour être sûr de ne pas se tromper.</p></div>
-    </div>
-    <p style="margin-top:22px">Un point fort du livre : les schémas existent en <strong>deux versions, Bamako (12° N) et Paris (49° N)</strong>, parce qu'une même constellation n'apparaît pas pareil selon l'endroit où l'on se trouve.</p>
   </section>
 
   <!-- PROGRAMME -->
@@ -237,10 +212,7 @@
     <h2>Questions fréquentes</h2>
     <details><summary>Faut-il un télescope ou des jumelles ?</summary><p>Non. Toute la méthode repose sur l'œil nu.</p></details>
     <details><summary>Est-ce que ça marche en ville ?</summary><p>Oui. Le livre est pensé pour les ciels pollués par la lumière : on part des astres les plus brillants et on suit des repères simples.</p></details>
-    <details><summary>Je suis en Afrique de l'Ouest, est-ce adapté ?</summary><p>Oui. Les repères sont donnés pour Bamako (12° N), avec des comparaisons pour Paris (49° N). Vous y trouverez aussi les astres du ciel austral : Croix du Sud, Canopus, Achernar, Alpha du Centaure.</p></details>
-    <details><summary>Et en France ou en Europe ?</summary><p>Oui, avec les schémas pour Paris. Les astres trop au sud pour être vus depuis l'Europe sont signalés comme tels.</p></details>
-    <details><summary>À quelle période observer ?</summary><p>Chaque objet a sa saison. Par exemple Orion de novembre à février, le Scorpion de mai à août, Cassiopée de septembre à décembre.</p></details>
-    <details><summary>Ebook ou broché ?</summary><p>Le broché se feuillette dehors, avec une lampe rouge ou faible. L'ebook se lit sur téléphone et reste toujours avec vous. Les deux contiennent les mêmes schémas.</p></details>
+    <details><summary>Est-ce adapté à l'Afrique de l'Ouest comme à l'Europe ?</summary><p>Oui. Les repères sont donnés pour Bamako (12° N) et pour Paris (49° N), avec les astres du ciel austral comme la Croix du Sud, Canopus ou Achernar.</p></details>
   </section>
 
   <!-- FICHE GRATUITE (cachée tant que MailerLite n'est pas prêt : supprime le mot "hidden" quand c'est bon) -->
@@ -255,25 +227,15 @@
     <h2>Levez les yeux dès ce soir</h2>
     <p class="lead">Choisissez votre format.</p>
     <div class="cta-row" style="justify-content:center">
-      <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G?utm_source=site" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
-      <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ?utm_source=site" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
-    </div>
-
-    <!-- ACHAT DIRECT PAR WHATSAPP (caché : supprime le mot "hidden" après avoir mis ton numéro, et seulement si l'ebook n'est PAS dans KDP Select) -->
-    <div id="achat-direct" hidden>
-      <p class="lead" style="margin-top:28px">Pas de carte bancaire pour Amazon ?</p>
-      <a class="btn alt" target="_blank" rel="noopener"
-         href="https://wa.me/223XXXXXXXX?text=Bonjour%2C%20je%20souhaite%20acheter%20le%20livre%20%C2%AB%20Apprendre%20%C3%A0%20lire%20le%20ciel%20%C2%BB%20en%20PDF.">
-         Commander le PDF par WhatsApp
-      </a>
-      <p class="price">Paiement par Mobile Money.</p>
+      <a class="btn" href="https://www.amazon.fr/dp/B0HKVGKB1G" target="_blank" rel="noopener">Broché sur Amazon – 12,98 €</a>
+      <a class="btn alt" href="https://www.amazon.fr/dp/B0HJT353KJ" target="_blank" rel="noopener">Ebook Kindle – 5 €</a>
     </div>
   </section>
 
 </div>
 
 <footer>
-  © 2026 Mohamed Lamine Traoré - Tous droits réservés<br>
+  © 2026 Mohamed Lamine Traoré – Tous droits réservés<br>
   <a href="https://forms.gle/swzBvvtkQxXRkKXR6" target="_blank" rel="noopener">Nous écrire</a>
 </footer>
 
