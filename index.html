@@ -40,24 +40,21 @@
     padding-bottom:env(safe-area-inset-bottom,0);
   }
 
-  /* Fond étoilé : deux couches fixes d'étoiles répétées */
+  /* Fond étoilé léger : peu d'étoiles, répétées et fixées à l'écran */
   body::before,body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
   body::before{
     background-image:
-      radial-gradient(1.8px 1.8px at 40px 60px,#fff,transparent),
-      radial-gradient(1.3px 1.3px at 150px 170px,#ffffffcc,transparent),
-      radial-gradient(2px 2px at 230px 90px,#fff,transparent),
-      radial-gradient(1.3px 1.3px at 90px 250px,#ffffffaa,transparent),
-      radial-gradient(1.6px 1.6px at 310px 200px,#fff,transparent);
-    background-size:260px 260px,340px 340px,420px 420px,300px 300px,380px 380px;
+      radial-gradient(1.8px 1.8px at 60px 80px,#fff,transparent),
+      radial-gradient(1.4px 1.4px at 300px 260px,#ffffffcc,transparent),
+      radial-gradient(2px 2px at 180px 420px,#fff,transparent);
+    background-size:480px 480px,560px 560px,640px 640px;
   }
   body::after{
     background-image:
-      radial-gradient(1.8px 1.8px at 120px 30px,#cfe0ff,transparent),
-      radial-gradient(1.4px 1.4px at 60px 190px,#fff,transparent),
-      radial-gradient(2px 2px at 250px 140px,#ffe9b8,transparent);
-    background-size:330px 330px,270px 270px,410px 410px;
-    animation:twinkle 5s ease-in-out infinite alternate;
+      radial-gradient(1.8px 1.8px at 200px 60px,#cfe0ff,transparent),
+      radial-gradient(1.6px 1.6px at 90px 300px,#ffe9b8,transparent);
+    background-size:520px 520px,700px 700px;
+    animation:twinkle 6s ease-in-out infinite alternate;
   }
   @keyframes twinkle{from{opacity:.2}to{opacity:1}}
   @media (prefers-reduced-motion:reduce){body::after{animation:none}}
@@ -104,8 +101,15 @@
   @media (max-width:700px){h1{font-size:2rem}.sticky{display:block}}
 </style>
 
-<!-- COLLE ICI le long code universel MailerLite, juste avant la fermeture du head -->
-
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2716875');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -235,11 +239,11 @@
     <details><summary>Est-ce adapté à l'Afrique de l'Ouest comme à l'Europe ?</summary><p>Oui. Les repères sont donnés pour Bamako (12° N) et pour Paris (49° N), avec les astres du ciel austral comme la Croix du Sud, Canopus ou Achernar.</p></details>
   </section>
 
-  <!-- FICHE GRATUITE (cachée tant que MailerLite n'est pas prêt : supprime le mot "hidden" quand c'est bon) -->
-  <section id="fiche" hidden>
+  <!-- FICHE GRATUITE (formulaire MailerLite) -->
+  <section id="fiche">
     <h2>Recevez une fiche gratuite : « Les premiers repères du ciel »</h2>
     <p>Laissez votre e-mail pour recevoir une fiche d'une page à emporter dehors, ainsi que les conseils d'observation du moment. Désinscription possible à tout moment.</p>
-    <div class="ml-embedded" data-form="CODE_DU_FORMULAIRE"></div>
+    <div class="ml-embedded" data-form="dZfory"></div>
   </section>
 
   <!-- ACHAT -->
@@ -271,7 +275,7 @@
 
 <footer>
   © 2026 Mohamed Lamine Traoré – Tous droits réservés<br>
-  <a href="LIEN_GOOGLE_FORM" target="_blank" rel="noopener" data-goatcounter-click="contact" data-goatcounter-title="Clic Nous écrire">Nous écrire</a>
+  <a href="https://bit.ly/4ecEO5O" target="_blank" rel="noopener" data-goatcounter-click="contact" data-goatcounter-title="Clic Nous écrire">Nous écrire</a>
 </footer>
 
 <div class="sticky">
